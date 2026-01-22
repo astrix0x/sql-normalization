@@ -1,14 +1,14 @@
-#SQL Normalization Task
+# SQL Normalization Task
 
 This repository demonstrates database normalization using an example student–games dataset in MySQL. It shows the process of organizing data into different normal forms to reduce redundancy and improve data integrity.
 
-#Task Structure
+# Task Structure
 
 database_dump.sql – Contains the SQL code to create the database, tables, and insert data.
 
 README.md – This documentation file describing the project.
 
-#What You’ll Find
+# What You’ll Find
 
 This project includes normalized database tables:
 
@@ -30,38 +30,10 @@ Run the SQL file:
 
 SOURCE database_dump.sql;
 
-
 The database named normalizations will be created with all tables and data inserted.
 
-# Example Queries
 
-Here are some useful queries you can try after importing the database:
-
-✔️ View all students
-
-SELECT * FROM Students;
-
-
-✔️ List all student–game pairs
-
-SELECT * FROM StudentGames;
-
-
-✔️ Show students with all their games (1NF style)
-
-SELECT s.s_id, s.name, g.game, s.section
-FROM Students s
-JOIN StudentGames g ON s.s_id = g.s_id;
-
-
-✔️ Display students and games grouped (similar to UNF)
-
-SELECT s.s_id, s.name, GROUP_CONCAT(g.game SEPARATOR ', ') AS games, s.section
-FROM Students s
-JOIN StudentGames g ON s.s_id = g.s_id
-GROUP BY s.s_id, s.name, s.section;
-
-#Why Normalization?
+# Why Normalization?
 
 Database normalization is a process of organizing data to:
 
