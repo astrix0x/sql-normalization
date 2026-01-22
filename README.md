@@ -1,8 +1,8 @@
-📚 #SQL Normalization Task
+#SQL Normalization Task
 
 This repository demonstrates database normalization using an example student–games dataset in MySQL. It shows the process of organizing data into different normal forms to reduce redundancy and improve data integrity.
 
- #Task Structure
+#Task Structure
 
 database_dump.sql – Contains the SQL code to create the database, tables, and insert data.
 
