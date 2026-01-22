@@ -1,0 +1,62 @@
+-- Creating database
+CREATE DATABASE normalizations;
+USE normalizations;
+
+-- Creating table Students
+CREATE TABLE Students (
+    s_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    section VARCHAR(50)
+);
+
+-- Creating table StudentGames
+CREATE TABLE StudentGames (
+    s_id INT,
+    game VARCHAR(50),
+    FOREIGN KEY (s_id) REFERENCES Students(s_id)
+);
+
+-- Creating table StudentsGames_1NF
+CREATE TABLE StudentsGames_1NF (
+    s_id INT,
+    name VARCHAR(50),
+    game VARCHAR(50),
+    section VARCHAR(50)
+);
+
+-- Creating table StudentsGames_UNF
+CREATE TABLE StudentsGames_UNF (
+    s_id INT,
+    name VARCHAR(50),
+    games VARCHAR(100),
+    section VARCHAR(50)
+);
+
+-- Inserting data into Students
+INSERT INTO Students (s_id, name, section) VALUES
+(1, 'Hari', 'AI'),
+(2, 'Ram', 'Ethical'),
+(3, 'Shyam', 'AI');
+
+-- Inserting data into StudentGames
+INSERT INTO StudentGames (s_id, game) VALUES
+(1, 'Chess'),
+(1, 'Football'),
+(2, 'Football'),
+(3, 'Basketball'),
+(3, 'Chess');
+
+-- Inserting data into StudentsGames_1NF
+INSERT INTO StudentsGames_1NF (s_id, name, game, section) VALUES
+(1, 'Hari', 'Chess', 'AI'),
+(1, 'Hari', 'Football', 'AI'),
+(2, 'Ram', 'Football', 'Ethical'),
+(3, 'Shyam', 'Basketball', 'AI'),
+(3, 'Shyam', 'Chess', 'AI');
+
+-- Inserting data into StudentsGames_UNF
+INSERT INTO StudentsGames_UNF (s_id, name, games, section) VALUES
+(1, 'Hari', 'Chess, Football', 'AI'),
+(2, 'Ram', 'Football', 'Ethical'),
+(3, 'Shyam', 'Basketball, Chess', 'AI');
+

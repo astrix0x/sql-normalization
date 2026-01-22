@@ -1,8 +1,3 @@
--- MySQL dump 10.13  Distrib 8.0.44, for Linux (x86_64)
---
--- Host: localhost    Database: normalizations
--- ------------------------------------------------------
--- Server version	8.0.44
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,11 +9,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `StudentGames`
---
-
 DROP TABLE IF EXISTS `StudentGames`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -29,11 +19,6 @@ CREATE TABLE `StudentGames` (
   CONSTRAINT `StudentGames_ibfk_1` FOREIGN KEY (`s_id`) REFERENCES `Students` (`s_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `Students`
---
-
 DROP TABLE IF EXISTS `Students`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -44,11 +29,6 @@ CREATE TABLE `Students` (
   PRIMARY KEY (`s_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `StudentsGames_1NF`
---
-
 DROP TABLE IF EXISTS `StudentsGames_1NF`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -59,11 +39,6 @@ CREATE TABLE `StudentsGames_1NF` (
   `section` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `StudentsGames_UNF`
---
-
 DROP TABLE IF EXISTS `StudentsGames_UNF`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -84,4 +59,3 @@ CREATE TABLE `StudentsGames_UNF` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-22 11:54:37
