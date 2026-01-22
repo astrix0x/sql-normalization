@@ -1,0 +1,70 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| normalizations     |
+| performance_schema |
+| students           |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use normalizations;
+Database changed
+mysql> show tables;
++--------------------------+
+| Tables_in_normalizations |
++--------------------------+
+| StudentGames             |
+| Students                 |
+| StudentsGames_1NF        |
+| StudentsGames_UNF        |
++--------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from StudentsGames_UNF;
++------+-------+-------------------+---------+
+| s_id | name  | games             | section |
++------+-------+-------------------+---------+
+|    1 | Hari  | Chess, Football   | AI      |
+|    2 | Ram   | Football          | Ethical |
+|    3 | Shyam | Basketball, Chess | AI      |
++------+-------+-------------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from StudentsGames_1NF;
++------+-------+------------+---------+
+| s_id | name  | game       | section |
++------+-------+------------+---------+
+|    1 | Hari  | Chess      | AI      |
+|    1 | Hari  | Football   | AI      |
+|    2 | Ram   | Football   | Ethical |
+|    3 | Shyam | Basketball | AI      |
+|    3 | Shyam | Chess      | AI      |
++------+-------+------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Students;
++------+-------+---------+
+| s_id | name  | section |
++------+-------+---------+
+|    1 | Hari  | AI      |
+|    2 | Ram   | Ethical |
+|    3 | Shyam | AI      |
++------+-------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from StudentGames;
++------+------------+
+| s_id | game       |
++------+------------+
+|    1 | Chess      |
+|    1 | Football   |
+|    2 | Football   |
+|    3 | Basketball |
+|    3 | Chess      |
++------+------------+
+5 rows in set (0.01 sec)
+
