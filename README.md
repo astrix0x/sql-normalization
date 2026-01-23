@@ -44,3 +44,14 @@ Ensure data dependencies make sense
 Improve data integrity and flexibility
 
 Normalization typically involves converting data into First Normal Form (1NF), Second Normal Form (2NF), Third Normal Form (3NF), and beyond.
+
+# Directory Format
+ sql-normalization
+    ├── database_dump.sql
+    ├── README.md
+    └── sql
+        ├── 01_schema.sql
+        ├── 02_data.sql
+        ├── outputs
+        │   └── output.txt
+        └── queries.txt
